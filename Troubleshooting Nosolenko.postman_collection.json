@@ -9,7 +9,27 @@
 			"name": "Addition",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/addition?a=15&b=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addition"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "15"
+						},
+						{
+							"key": "b",
+							"value": "5"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -17,7 +37,27 @@
 			"name": "Substraction",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/subtraction?a=15&b=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subtraction"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "15"
+						},
+						{
+							"key": "b",
+							"value": "5"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -25,7 +65,27 @@
 			"name": "Multiplication",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/multiplication?a=15&b=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"multiplication"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "15"
+						},
+						{
+							"key": "b",
+							"value": "5"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -61,7 +121,76 @@
 			"name": "Addition Exceprion",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/addition?a=15&b=ex",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addition"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "15"
+						},
+						{
+							"key": "b",
+							"value": "ex"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logging levels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/actuator/loggers/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change logging level",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"configuredLevel\": \"WARN\",\r\n    \"effectiveLevel\": \"INFO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/actuator/loggers/ru.neoflex.troubleshooting.controller.MainController",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"ru.neoflex.troubleshooting.controller.MainController"
+					]
+				}
 			},
 			"response": []
 		}

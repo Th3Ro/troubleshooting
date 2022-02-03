@@ -18,9 +18,9 @@ public class MainController {
                                            @RequestParam(required = false) String b) {
         log.info("Вызов функции 'addition' c параметрами {} и {}.", a, b);
         try{
-            log.info("Замена запятых на точки в параметре {}.", a);
+            log.warn("Замена запятых на точки в параметре {}.", a);
             a = a.replace(',', '.');
-            log.info("Замена запятых на точки в параметре {}.", b);
+            log.warn("Замена запятых на точки в параметре {}.", b);
             b = b.replace(',', '.');
             log.info("Суммирование параметров {} и {}.", a, b);
             double result = Double.parseDouble(a) + Double.parseDouble(b);
@@ -40,9 +40,9 @@ public class MainController {
                                               @RequestParam(required = false) String b) {
         log.info("Вызов функции 'subtraction' c параметрами {} и {}.", a, b);
         try{
-            log.info("Замена запятых на точки в параметре {}.", a);
+            log.warn("Замена запятых на точки в параметре {}.", a);
             a = a.replace(',', '.');
-            log.info("Замена запятых на точки в параметре {}.", b);
+            log.warn("Замена запятых на точки в параметре {}.", b);
             b = b.replace(',', '.');
             log.info("Вычитание параметров {} и {}.", a, b);
             double result = Double.parseDouble(a) - Double.parseDouble(b);
@@ -62,9 +62,9 @@ public class MainController {
                                                  @RequestParam(required = false) String b) {
         log.info("Вызов функции 'multiplication' c параметрами {} и {}.", a, b);
         try{
-            log.info("Замена запятых на точки в параметре {}.", a);
+            log.warn("Замена запятых на точки в параметре {}.", a);
             a = a.replace(',', '.');
-            log.info("Замена запятых на точки в параметре {}.", b);
+            log.warn("Замена запятых на точки в параметре {}.", b);
             b = b.replace(',', '.');
             log.info("Умножение параметров {} и {}.", a, b);
             double result = Double.parseDouble(a) * Double.parseDouble(b);
@@ -84,9 +84,9 @@ public class MainController {
                                            @RequestParam(required = false) String b) {
         log.info("Вызов функции 'division' c параметрами {} и {}.", a, b);
         try{
-            log.info("Замена запятых на точки в параметре {}.", a);
+            log.warn("Замена запятых на точки в параметре {}.", a);
             a = a.replace(',', '.');
-            log.info("Замена запятых на точки в параметре {}.", b);
+            log.warn("Замена запятых на точки в параметре {}.", b);
             b = b.replace(',', '.');
             log.info("Деление параметров {} и {}.", a, b);
             double result = Double.parseDouble(a) / Double.parseDouble(b);
