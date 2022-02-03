@@ -1,5 +1,8 @@
 package ru.neoflex.troubleshooting.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 @Log4j2
+@Tag(name = "Главный контроллер", description = "Позволяет выполнять основные математические операции")
 public class MainController {
 
+    @Operation(
+            summary = "Суммирование",
+            description = "Позволяет суммировать два числа"
+    )
     @GetMapping("addition")
-    public ResponseEntity<String> addition(@RequestParam(required = false) String a,
-                                           @RequestParam(required = false) String b) {
+    public ResponseEntity<String> addition(
+            @RequestParam(required = false) @Parameter(description = "Первое слагаемое") String a,
+            @RequestParam(required = false) @Parameter(description = "Второе слагаемое") String b) {
         log.info("Вызов функции 'addition' c параметрами {} и {}.", a, b);
         try{
             log.warn("Замена запятых на точки в параметре {}.", a);
@@ -35,9 +44,14 @@ public class MainController {
         }
     }
 
+    @Operation(
+            summary = "Вычитание",
+            description = "Позволяет получить разность двух чисел"
+    )
     @GetMapping("subtraction")
-    public ResponseEntity<String> subtraction(@RequestParam(required = false) String a,
-                                              @RequestParam(required = false) String b) {
+    public ResponseEntity<String> subtraction(
+            @RequestParam(required = false) @Parameter(description = "Уменьшаемое") String a,
+            @RequestParam(required = false) @Parameter(description = "Вычитаемое") String b) {
         log.info("Вызов функции 'subtraction' c параметрами {} и {}.", a, b);
         try{
             log.warn("Замена запятых на точки в параметре {}.", a);
@@ -57,9 +71,14 @@ public class MainController {
         }
     }
 
+    @Operation(
+            summary = "Умножение",
+            description = "Позволяет перемножить два числа"
+    )
     @GetMapping("multiplication")
-    public ResponseEntity<String> multiplication(@RequestParam(required = false) String a,
-                                                 @RequestParam(required = false) String b) {
+    public ResponseEntity<String> multiplication(
+            @RequestParam(required = false) @Parameter(description = "Первый множитель") String a,
+            @RequestParam(required = false) @Parameter(description = "Второй множитель") String b) {
         log.info("Вызов функции 'multiplication' c параметрами {} и {}.", a, b);
         try{
             log.warn("Замена запятых на точки в параметре {}.", a);
@@ -79,9 +98,14 @@ public class MainController {
         }
     }
 
+    @Operation(
+            summary = "Деление",
+            description = "Позволяет разделить два числа"
+    )
     @GetMapping("division")
-    public ResponseEntity<String> division(@RequestParam(required = false) String a,
-                                           @RequestParam(required = false) String b) {
+    public ResponseEntity<String> division(
+            @RequestParam(required = false) @Parameter(description = "Делимое") String a,
+            @RequestParam(required = false) @Parameter(description = "Делитель") String b) {
         log.info("Вызов функции 'division' c параметрами {} и {}.", a, b);
         try{
             log.warn("Замена запятых на точки в параметре {}.", a);

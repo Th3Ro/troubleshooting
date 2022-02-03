@@ -9,8 +9,8 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>ru.neoflex.troubleshooting</groupId>
+	<artifactId>troubleshooting</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>troubleshooting</name>
@@ -56,6 +56,24 @@
 			<artifactId>mockito-inline</artifactId>
 			<version>4.0.0</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 	</dependencies>
 
