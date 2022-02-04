@@ -1,5 +1,5 @@
 <h1>This project is the result of a troubleshooting homework.</h1>
-
+<p>This is just a calculator with four operations (+, -, *, /).</p>
 <h2>Running:</h2>
 <p>Run docker-compose up --build from base directory.</p>
 
