@@ -1,11 +1,20 @@
 management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+    loggers:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}}
   endpoints:
     web:
       exposure:
-        include: loggers
-  endpoint:
-    loggers:
-      enabled: true
+        include: "*"
 
 logging:
   level:
